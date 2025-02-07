@@ -17,6 +17,16 @@ app.get('/', async (req, res) => {
     cleanblogs,
   });
 });
+app.get('/cleanblogs/:id', async (req, res) => {
+  //console.log(req.params.id);
+  // res.render('about');
+  console.log(req.params.id);
+  const post = await CleanBlog.findById(req.params.id);
+  console.log(post);
+  res.render('post', {
+    post,
+  });
+});
 app.get('/about', (req, res) => {
   res.render('about');
 });
