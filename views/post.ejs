@@ -65,6 +65,17 @@
             <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
         </div>
       </div>
+      <div class="col-xl-4 col-lg-5">
+        <!-- Share box -->
+        <div class="tm-bg-gray tm-share-box flex">
+          <div class="text-center">
+            <a href="/cleanblogs/edit/<%= post._id%>" class="btn btn-primary p-6 mb-4 tm-btn-animate tm-btn-download tm-icon-download"><span>Update Details</span></a>	
+          </div>	
+          <div class="text-center">
+            <a href="/cleanblogs/<%= post._id %>?_method=DELETE" onclick="return confirm('Are you sure?')" class="btn btn-danger p-6 mb-4 tm-btn-animate tm-btn-download tm-icon-download"><span>Delete Post</span></a>	
+          </div>								
+        </div>
+      </div>
     </div>
   </article>
 
